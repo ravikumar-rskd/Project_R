@@ -4,9 +4,8 @@ from bson import ObjectId
 
 async def get_all_lessons():
     lessons = await database["lessons"].find().to_list(100)
-    return lessons
-    # [LessonResponse(id=str(lesson["_id"]), **lesson) for lesson in lessons]
-
+    return [LessonResponse(id=str(lesson["_id"]), **lesson) for lesson in lessons]
+    
 async def get_lesson(lesson_id: str):
     lesson = await database["lessons"].find_one({"_id": ObjectId(lesson_id)})
     if lesson:

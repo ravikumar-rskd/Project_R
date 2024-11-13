@@ -1,11 +1,16 @@
 import os
 from dotenv import load_dotenv
 
+
+# Change the working directory to the 'app' directory
+os.chdir("C:/Users/isdx/OneDrive/Desktop/Project_R/app")
+print("Current working directory:", os.getcwd())
+# Load environment variables from the .env file
 load_dotenv()
 
 class Settings:
-    MONGODB_URL = os.getenv("MONGODB_URL")
-    DATABASE_NAME = os.getenv("DATABASE_NAME")
+    MONGODB_URL = os.getenv("MONGODB_URL")  # Fetch from environment variable
+    DATABASE_NAME = os.getenv("DATABASE_NAME")  # Fetch from environment variable
 
 settings = Settings()
 

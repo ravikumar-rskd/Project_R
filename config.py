@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 
 # Change the working directory to the 'app' directory
-os.chdir("C:/Users/isdx/OneDrive/Desktop/Project_R/app")
+os.chdir("C:/Users/isdx/OneDrive/Desktop/Project-R_data/Project_R/app") #specify path of your config.py file
 print("Current working directory:", os.getcwd())
 # Load environment variables from the .env file
 load_dotenv()
